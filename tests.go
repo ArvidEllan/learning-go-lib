@@ -12,3 +12,10 @@ func TestNewUuidWithHyphen(t *testing.T) {
 	assert.Len(t, uuidWithHyphen, 36)
 	assert.Contains(t, uuidWithHyphen, "-")
 }
+
+func TestNewUuidWithoutHyphen(t *testing.T) {
+	uuidWithHyphen := NewUuid(true)
+
+	assert.Len(t, uuidWithHyphen, 32)
+	assert.NotContains(t, uuidWithHyphen, "-")
+}
