@@ -3,8 +3,8 @@ package programming
 import (
 	"net/http"
 
-	"github.com/ArvidEllan/learning-go-lib/programming"
 	"github.com/gin-gonic/gin"
+	"github.com/renato0307/learning-go-lib/programming"
 )
 
 // postUuidOutput is the output of the "POST /programming/uuid" action
