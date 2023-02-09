@@ -1,3 +1,23 @@
+package programming
+
+import (
+	"encoding/json"
+	"net/http"
+	"net/http/httptest"
+	"testing"
+
+	"github.com/gin-gonic/gin"
+	"github.com/stretchr/testify/assert"
+)
+
+func setupGin() *gin.Engine {
+	r := gin.Default()
+	v1 := r.Group("/v1")
+	SetRouterGroup(v1)
+
+	return r
+}
+
 func TestPostUuid(t *testing.T) {
 	// arrange
 	r := gin.Default()
